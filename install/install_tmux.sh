@@ -13,6 +13,7 @@ sudo apt-get install -y gcc
 sudo apt-get install -y autotools-dev
 sudo apt-get install -y automake
 sudo apt-get install -y libncurses5-dev libncursesw5-dev
+sudo apt-get install -y libevent-dev
 
 if ! [ -d ~/tmp ]; then mkdir ~/tmp; fi
 cd ~/tmp || die "cannot chdir to ~/tmp"
