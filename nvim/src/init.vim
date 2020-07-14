@@ -468,9 +468,7 @@ augroup my_tmux
     nnoremap z= :call FzfSpell()<CR>
     inoremap <Leader>li :LinuxCodingStyle<cr>
     let g:linuxsty_patterns = [ "/kernel/", "/linux/"]
-    nnoremap <C-d> :call InsertDate()<cr>
     nnoremap <F10> :call LaunchIpythonInTmux()<CR>
-    inoremap <C-d> <C-o>:call InsertDate() <CR>
     :map <Leader>tt <Plug>VimwikiToggleListItem
     "replace all occurences of the word under cursor
     :nnoremap <Leader>s :call ReplaceWordUnderCursor()<CR>
