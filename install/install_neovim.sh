@@ -23,4 +23,5 @@ if ! [ -f ~/.config/nvim/autoload/plug.vim]; then
 fi
 
 sudo apt install silversearcher-ag exuberant-ctags cscope global codesearch -y || die "cannot install vim depended packages"
+sudo pip install --upgrade psutil
 nvim +PlugInstall +qall || die "cannot install vim plugins"
