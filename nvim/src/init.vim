@@ -9,7 +9,7 @@ endif
 
 call plug#begin()
 "Plug 'ctrlpvim/ctrlp.vim'
- "Plug 'justmao945/vim-clang'
+"Plug 'justmao945/vim-clang'
 "Plug 'chazy/cscope_maps'
 Plug 'junegunn/vim-easy-align'
 Plug 'wesleyche/SrcExpl'
@@ -261,10 +261,10 @@ set showcmd
 set incsearch
 set hlsearch
 color desert
-"set shiftwidth=4
-"set tabstop=4
+set shiftwidth=4
+set tabstop=4
 set cmdheight=1
-"set number
+set number
 set wildmode=list:longest,full
 set completeopt=longest,menuone
 set nowrap
