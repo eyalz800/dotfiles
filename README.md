@@ -79,12 +79,12 @@ printf "\e[?2004l"
 if [[ -z "$TMUX" ]] && [ "$SSH_CONNECTION" != "" ]; then
     if [ -z "$DISPLAY" ]; then
         echo "X DISPLAY not available"
-        sleep 3
     fi
     [ -f ~/.fzf.bash ] && source ~/.fzf.bash
-    export session=$(tmux list-sessions -F "#{session_id}" | sort -n | tail -1 2>/dev/null)
-    tmux new-session -s "ssh_tmux$session"
-    exit
+    tmux a -t "main"
+    if [ $? != 0 ]; then
+        tmux new-session -s "main"
+    fi
 fi
 ```
 
