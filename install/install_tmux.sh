@@ -15,6 +15,7 @@ sudo apt-get install -y automake
 sudo apt-get install -y libncurses5-dev libncursesw5-dev
 sudo apt-get install -y libevent-dev
 sudo apt-get install -y xclip
+/usr/bin/env python -m pip install psutil
 
 if ! [ -d ~/tmp ]; then mkdir ~/tmp; fi
 cd ~/tmp || die "cannot chdir to ~/tmp"
