@@ -80,12 +80,13 @@ if [[ -z "$TMUX" ]] && [ "$SSH_CONNECTION" != "" ]; then
     if [ -z "$DISPLAY" ]; then
         echo "X DISPLAY not available"
     fi
-    [ -f ~/.fzf.bash ] && source ~/.fzf.bash
     tmux a -t "main"
     if [ $? != 0 ]; then
         tmux new-session -s "main"
     fi
 fi
+
+[ -f ~/.fzf.bash ] && source ~/.fzf.bash
 ```
 
 1. Make sure that tmux is launched correctly, open and new terminal
