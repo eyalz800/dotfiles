@@ -14,7 +14,6 @@ sudo apt-get update
 sudo apt-get install -y build-essential gcc autotools-dev automake libncurses5-dev libncursesw5-dev libevent-dev xclip bison
 /usr/bin/env python -m pip install psutil
 
-rm -rf tmux
-git clone https://github.com/tmux/tmux.git || die "cannot clone tmux source"
-cd tmux; ./autogen.sh; ./configure && make -j; sudo make install; cd ..
-cp tmux.conf ~/.tmux.conf || die "could deploy .tmux.conf"
+rm -rf tmux_git; mkdir -p tmux_git; cd tmux_git; git clone https://github.com/tmux/tmux.git
+cd tmux; ./autogen.sh; ./configure && make -j; sudo make install; cd ../..; rm -rf tmux_git
+cp tmux.conf ~/.tmux.conf
